@@ -21,8 +21,8 @@ If (tmp=0)
 	}
 	F9 & 1::  win1_run := Not win1_run
 	F9 & 2::  win2_run := Not win2_run
-	Ctrl & F10::Pause
-	Ctrl & F12::ExitApp
+	F10::Pause
+	F12::ExitApp
 }
 Return
 fishRightKey1:
