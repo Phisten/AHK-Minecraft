@@ -13,7 +13,6 @@ Please_Press_F3andP:=12345
 win1_run := true
 win1_L_run := false
 win2_run := true
-win2_L_run := false
 If (tmp=0)
 {
 	SetTimer fishRightKey1,1000
@@ -24,7 +23,6 @@ If (tmp=0)
 	F9 & 1::  win1_run := Not win1_run
 	F9 & 2::  win2_run := Not win2_run
 	F9 & Q::  win1_L_run := Not win1_L_run
-	F9 & W::  win2_L_run := Not win2_L_run
 	
 	Ctrl & F10::Pause
 	Ctrl & F12::ExitApp
@@ -40,8 +38,5 @@ If(win1_run)
 return
 fishRightKey2:
 If(win2_run)
-	if(win2_L_run)
-		ControlClick,, ahk_id %minecraftID2%,,LEFT,,NA
-	else
-		ControlClick,, ahk_id %minecraftID2%,,RIGHT,,NA
+	ControlClick,, ahk_id %minecraftID2%,,RIGHT,,NA
 return
